@@ -17,16 +17,34 @@
 
 
   #######################CHATGPT###########################
+# import os
+# HARSHADAAAAAAAAAAAAAAAAAAAAAAAA
+# # os.environ["PYSPARK_PYTHON"] = r"C:\Users\Harshada\venv\Scripts\python.exe"
+# # os.environ["PYSPARK_DRIVER_PYTHON"] = r"C:\Users\Harshada\venv\Scripts\python.exe"
+
+# import sys
+# print("Python executable:", sys.executable)
+
+# from pyspark.sql import SparkSession
+
+# spark = SparkSession.builder \
+#     .appName("RDD_Test") \
+#     .master("local[*]") \
+#     .getOrCreate()
+
+# sc = spark.sparkContext
+
+#VISHALLLLLLLLLLLLLLLLLLLLLLLLLLLL
 import os
 
-os.environ["PYSPARK_PYTHON"] = r"C:\Users\Harshada\venv\Scripts\python.exe"
-os.environ["PYSPARK_DRIVER_PYTHON"] = r"C:\Users\Harshada\venv\Scripts\python.exe"
+os.environ["PYSPARK_PYTHON"] = r"C:\Program Files\Python312\python.exe"
+os.environ["PYSPARK_DRIVER_PYTHON"] = r"C:\Program Files\Python312\python.exe"
 
 from pyspark.sql import SparkSession
 
 spark = SparkSession.builder \
-    .appName("RDD_Test") \
-    .master("local[*]") \
+    .master("local[1]") \
+    .appName("WorkerTest") \
     .getOrCreate()
 
 sc = spark.sparkContext
